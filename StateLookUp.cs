@@ -9,15 +9,6 @@ public class StateLookUp{
                           where state.StartsWith(search) 
                           orderby state ascending
                           select state;
-
-        /*
-        foreach(string state in STATES){
-            if(state.StartsWith(search)){
-                matches.Add(state);
-            }
-        }
-        */
-
-        return matches;
+        return LINQmatches;
     }
 }
