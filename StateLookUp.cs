@@ -5,11 +5,15 @@ public class StateLookUp{
     public IEnumerable<string> LookUp(string search){
         var matches = new List<string>();
 
+        var LINQmatches = from state in STATES where state.StartsWith(search) select state;
+
+        /*
         foreach(string state in STATES){
             if(state.StartsWith(search)){
                 matches.Add(state);
             }
         }
+        */
 
         return matches;
     }
